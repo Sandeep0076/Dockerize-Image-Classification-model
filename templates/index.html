@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
+  
+</head>
+
+<body>
+<table>
+  <tr>
+    <td>
+      <img width="600px" height="500px" src="https://cdn-www.comingsoon.net/assets/uploads/2021/05/dragon-ball.jpg" />
+    </td>
+    <td>
+      <img width="500px" height="500px" src=  "https://i.pinimg.com/originals/4e/aa/b6/4eaab69fcf8d928738072cd355a980db.jpg"/>
+    </td>
+    <td>
+      <img width="500px" height="500px" src="https://static.zerochan.net/Uzumaki.Naruto.full.3291213.jpg" />
+    </td>
+    <td>
+      <img width="600px" height="500px" src="https://bbts1.azureedge.net/images/p/full/2021/02/cc97eea8-abbf-47f5-a66a-652c6feacdc7.jpg" />
+    </td>
+
+  </tr>
+</table>
+
+
+ <div class="login">
+	<h1>Predict anime hero</h1>
+  
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="image_upload" placeholder="image_upload" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
