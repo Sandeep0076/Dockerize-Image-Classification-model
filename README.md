@@ -1,4 +1,4 @@
-# Sandeep0076-Dockerize-Image-Classification-model
+Dockerize-Image-Classification-model
 
 ## Objective
 To build and deploy a web application where the a url is fed to the application and it can classify the anime character
